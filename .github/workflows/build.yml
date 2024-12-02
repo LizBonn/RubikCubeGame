@@ -41,7 +41,7 @@ jobs:
         run: env LEAN_ABORT_ON_PANIC=1 lake build gameserver
 
       - name: building game
-        run: env LEAN_ABORT_ON_PANIC=1 lake build
+        run: env LEAN_ABORT_ON_PANIC=1 lake build Game
 
       - name: delete unused mathlib cache
         continue-on-error: true

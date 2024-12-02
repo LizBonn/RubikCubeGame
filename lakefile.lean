@@ -34,6 +34,7 @@ you can use `require mathlib from git "[URL]" @ leanVersion`
 
 require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ leanVersion
 
+require «doc-gen4» from git "https://github.com/leanprover/doc-gen4" @ "a34d3c1f7b72654c08abe5741d94794db40dbb2e"
 
 
 /-! # END USER SECTION -/
@@ -52,7 +53,7 @@ package Game where
     ⟨`trace.debug, true⟩]
   weakLeanArgs := #[]
 
-@[default_target]
+-- @[default_target]
 lean_lib Game
 
 @[default_target]
