@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Dec  2 15:02:02 2024\n"
+"POT-Creation-Date: Fri Dec  6 15:27:00 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -54,21 +54,174 @@ msgstr ""
 msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
 msgstr ""
 
+#: Game.Levels.World_one.L01_Introduction
+msgid "Group in Lean"
+msgstr ""
+
+#: Game.Levels.World_one.L01_Introduction
+msgid "First, we introduce how to define a group in Lean. Just use `(G : Type*) [Group G]`.\n"
+"This defines `G` as a group. A group is a special set such that the elements of the group can be combined using a binary operation, which we will denote by `*`, which is defined as a mapping from `G ⨯ G` to `G`.\n"
+"\n"
+"Groups satisfy four conditions: (1) For any elements `a` and `b` in the group, `a * b` is also in the group — this follows from the definition of `*`.\n"
+"(2) The associative property holds. For any `a`, `b`, `c` in `G`: `a * b * c = a * (b * c)`.\n"
+"(3) There exists an identity element `1`. For any `a` in `G`: `1 * a = a * 1 = a`.\n"
+"(4) Every element has an inverse. For any `a` in G: `a⁻¹ * a = 1`."
+msgstr ""
+
+#: Game.Levels.World_one.L01_Introduction
+msgid "In this first level we're going to introduce the tactic `rfl` as well.\n"
+"The tactic `rfl` proves all theorems of the form `X = X`.\n"
+"Prove that `a * b = a * b` by executing the `rfl` tactic."
+msgstr ""
+
+#: Game.Levels.World_one.L01_Introduction
+msgid "In order to use the tactic `rfl`, you can enter it in the text box under the goal and hit \"Execute\""
+msgstr ""
+
+#: Game.Levels.World_one.L01_Introduction
+msgid "Congratulations! You completed your first verified proof!\n"
+"Remember that `rfl` is a tactic.\n"
+"If you ever want information about the `rfl` tactic, you can click on `rfl` in the list of tactics on the right.\n"
+"Now click on \"Next\" to learn about the `rw` tactic."
+msgstr ""
+
+#: Game.Levels.World_one.L02_mul_assoc
+msgid "mul_assoc"
+msgstr ""
+
+#: Game.Levels.World_one.L02_mul_assoc
+msgid "The next levels focus on the basic properties required in the definition of group.\n"
+"In this second level the goal is `a * b * c = b * (a * c)`, but to help us we have an assumption `h` saying that `a * b = b * a`.\n"
+"Check that you can see `h` in your list of assumptions.\n"
+"Before we can use `rfl`, we have to substitute `b * a` for `a * b`.\n"
+"We do this in Lean by rewriting the proof `h`, using the `rw` tactic."
+msgstr ""
+
+#: Game.Levels.World_one.L02_mul_assoc
+msgid "First execute `rw [h]` to replace the `a * b` with `b * a`."
+msgstr ""
+
+#: Game.Levels.World_one.L02_mul_assoc
+msgid "Then recall the definition of group in level 1, we know that `(a b c : G): a * b * c = a* (b * c)`.\n"
+"The proof of `a * b * c = a * (b * c)` is called mul_assoc."
+msgstr ""
+
+#: Game.Levels.World_one.L02_mul_assoc
+msgid "Continue with `rw [mul_assoc]` to change `b * a * c`  to `b * (a * c)`. Lean can automatically identify variables to apply the lemmas."
+msgstr ""
+
+#: Game.Levels.World_one.L02_mul_assoc
+msgid "Level completed! Note that you can do `rw [h, mul_assoc]` to solve this level in one line.\n"
+"Let's continue the journey."
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "Inverse Uniqueness"
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "In this third level the goal is to prove the left inverse of an element is unique.\n"
+"That is `∀ y : G, y * x = 1 → y = x⁻¹`.\n"
+"In order to prove a universal proposition, we need to use the tactic `intro`."
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "Try to execute `intro y h`. We can get an assumption `h` saying that `y * x = 1`, while `y` is arbitrary."
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "Then to prove `y = x⁻¹`, we need to rewrite the proof `h` with lemmas on the right.\n"
+"You can click on lemmas to learn their specific content and usage.\n"
+"`←` is useful in this level, `← h` means switching the two sides of the equation in `h`.\n"
+"Type \\l and then hit the space bar can get this arrow.\n"
+"For example, You can execute `rw [← h]`, if you want to rewrite the proof `1 = y * x` rather than `h : y * x = 1`."
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "Similarly, `← one_mul` means `(a : G): a = 1 * a`.\n"
+"Let's learn how to tell Lean to change `x⁻¹` in the goal `y = x⁻¹` by giving `← one_mul` an explicit parameter.\n"
+"Try `rw [← one_mul x⁻¹]` to change `x⁻¹` into `1 * x⁻¹`."
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "Can you take it from here?"
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "Try `rw [← h, mul_assoc, mul_right_inv, mul_one]`"
+msgstr ""
+
+#: Game.Levels.World_one.L03_inverse_uniqueness
+msgid "Level completed!Let's continue the journey."
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "inverse_property"
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "You may have noticed that we used the lemma `mul_right_inv` in the last level.\n"
+"It says `(a : G) : a * a⁻¹ = 1`, while the definition of inv `x⁻¹` in group `G` is `(a : G): a⁻¹ * a = 1`.\n"
+"In this fourth level the goal is to prove `∀ x : G, x * x⁻¹ = 1`, which means left inverse equals right inverse in a group."
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "You can find that this prop with `∀` is no longer in the form of `Prop → Prop`.\n"
+"That means you just need to arbitrarily get an element from `G` without getting an assumption.\n"
+"So just execute `intro x` is Okay. It means `(x : G)`, while `x` is arbitrary."
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "Note that if you want to tell lean to change `x * x⁻¹` in the goal by giving `← one_mul` an input `x * x⁻¹`, please put it in the parentheses. Can you take it from here?"
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "Try `rw [← one_mul (x * x⁻¹)]`"
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "If you want to rewrite the nth target conform to the form, just replace `rw` with `nth_rw n`.\n"
+"For example, `nth_rw 1` rewrite the first target conform to the form.\n"
+"Let's now try to solve this goal."
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "Try `nth_rw 1 [← mul_left_inv x⁻¹]` and then `rw [mul_assoc x⁻¹⁻¹ x⁻¹ (x * x⁻¹), ← mul_assoc x⁻¹  x  x⁻¹]`"
+msgstr ""
+
+#: Game.Levels.World_one.L04_inverse_property
+msgid "Level completed! Let's continue the journey."
+msgstr ""
+
+#: Game.Levels.World_one
+msgid "World One"
+msgstr ""
+
+#: Game.Levels.World_one
+msgid "Welcome to tutorial world! In this world we learn the basic definition and property of group, and try to prove some relevant theorems.The boss level of this world is to prove: In the additive group ZMod n, -x is the right inverse of x. At the same time, we will understand the essence of the Rubik's cube from the perspective of group theory."
+msgstr ""
+
+#: Game.Levels.World_one
+msgid "You prove theorems by solving puzzles using tools called tactics.\n"
+"The aim is to prove the theorem by applying tactics in the right order.\n"
+"Let's learn some basic concepts and tactics. Click on \"Start\" below to begin your quest."
+msgstr ""
+
 #: Game
 msgid "Hello World Game"
 msgstr ""
 
 #: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
+msgid "This text appears on the starting page where one selects the world/level to play.\n"
 "You can use markdown."
 msgstr ""
 
 #: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
-"\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
-"\n"
+msgid "Here you can put additional information about the game. It is accessible\n"
+"from the starting through the drop-down menu.\n"
+"\n"
+"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
+"\n"
 "Use markdown."
 msgstr ""
 

@@ -2,6 +2,10 @@ import Game.Levels.World_one.L01_Introduction
 import Game.Levels.World_one.L02_mul_assoc
 import Game.Levels.World_one.L03_inverse_uniqueness
 import Game.Levels.World_one.L04_inverse_property
+import Game.Levels.World_one.L05_ZMod_definition
+import Game.Levels.World_one.L06_ZMod_addition
+import Game.Levels.World_one.L07_ZMod_zero
+import Game.Levels.World_one.L08_ZMod_neg
 
 World "World_One"
 Title "World One"
