@@ -3,6 +3,8 @@ import Game.Metadata
 World "World_One"
 Level 8
 
+Title "ZMod negation"
+
 Introduction "In this eighth level the goal is to prove each element in `ZMod n` has a right inverse.
 
 The right inverse `-x` is defined by `(-x).val = (n - x.val) % n` and `(-x).val_lt : (n - x.val) % n < n`."

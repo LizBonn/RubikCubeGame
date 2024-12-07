@@ -28,10 +28,10 @@ Statement (G : Type*) [Group G] : ∀ x : G, x * x⁻¹ = 1 := by
   Let's now try to solve this goal."
   Hint (hidden := true) "Try `nth_rw 1 [← mul_left_inv x⁻¹]` and then `rw [mul_assoc x⁻¹⁻¹ x⁻¹ (x * x⁻¹), ← mul_assoc x⁻¹  x  x⁻¹]`"
   nth_rw 1 [← mul_left_inv x⁻¹]
-  rw [mul_assoc x⁻¹⁻¹  x⁻¹  (x * x⁻¹)]
-  rw [← mul_assoc x⁻¹  x  x⁻¹]
+  rw [mul_assoc x⁻¹⁻¹ x⁻¹ (x * x⁻¹)]
+  rw [← mul_assoc x⁻¹ x x⁻¹]
   rw [mul_left_inv x]
-  rw [one_mul ]
+  rw [one_mul]
   rw [mul_left_inv]
 
 Conclusion "Level completed! Let's continue the journey."
