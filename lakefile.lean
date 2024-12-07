@@ -52,7 +52,7 @@ package Game where
     ⟨`trace.debug, true⟩]
   weakLeanArgs := #[]
 
-@[default_target]
+-- @[default_target]
 lean_lib Game
 
 @[default_target]
