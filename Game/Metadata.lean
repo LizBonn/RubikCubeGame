@@ -1,6 +1,6 @@
 import GameServer.Commands
-
--- import Mathlib.Tactic.Common
+import Mathlib.Tactic
+import Game.aux_thm.aux_thm
 
 /-! Use this file to add things that should be available in all levels.
 
