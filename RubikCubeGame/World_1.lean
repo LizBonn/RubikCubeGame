@@ -165,3 +165,10 @@ example (n : ℕ) [NeZero n] (x : ZMod n) : x + -x = 0 := by
 
 example (n : ℕ) [NeZero n] (x : ZMod n) : x + -x = 0 := by
   rw [add_right_neg]
+
+example (h : s ⊆ t) : s ∩ u ⊆ t ∩ u := by
+  rw [subset_def, inter_def, inter_def]
+  rw [subset_def] at h
+  simp only [mem_setOf]
+  rintro x ⟨xs, xu⟩
+  exact ⟨h _ xs, xu⟩
