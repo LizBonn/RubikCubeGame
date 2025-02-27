@@ -4,36 +4,13 @@ World "World_Two"
 Level 8
 Title "Exercise"
 
-Statement {α : Type*} (s t r : Set α): (s ∪ t) ∪ r = s ∪ (t ∪ r) := by
+Statement {α : Type*} (s t : Set α) : s ⊆ t → s ∩ t = s := by
+  intro h
   ext x
-  rw [Set.mem_union]
+  rw [Set.mem_inter_iff]
   constructor
-  · rintro (h | h)
-    · rw [Set.mem_union] at *
-      rcases h with h | h
-      · left
-        exact h
-      · right
-        rw [Set.mem_union]
-        left
-        exact h
-    · rw [Set.mem_union, Set.mem_union]
-      right
-      right
-      exact h
-  · rintro (h | h)
-    · left
-      rw [Set.mem_union]
-      left
-      exact h
-    · rw [Set.mem_union] at *
-      rcases h with h | h
-      left
-      right
-      exact h
-      right
-      exact h
+  exact fun ha ↦ ha.1
+  exact fun ha ↦ ⟨ha, h ha⟩
 
 
 Conclusion "Level Completed!"
-NewTactic left right
