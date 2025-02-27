@@ -51,7 +51,7 @@ example {α : Type*} (s t : Set α) : s ⊆ t → s ∩ t = s := by
 
 -- Level 9. A subgroup of a group is a subset of the group.
 example {G : Type*} [Group G] (H : Subgroup G) : H.carrier ⊆ ⊤ := by
-  intro x _
+  intro x _h
   exact trivial
 
 -- Level 10. Elements of a subgroup is closed under multiplication.
