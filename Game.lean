@@ -1,5 +1,7 @@
 import Game.Levels.DemoWorld
 import Game.Levels.World_one
+import Game.Levels.World_two
+import Game.Levels.World_three
 
 -- Here's what we'll put on the title screen
 Title "Hello World Game"

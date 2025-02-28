@@ -62,7 +62,7 @@ example {G : Type*} [Group G] (H : Subgroup G) {x y : G} (hx : x ∈ H) (hy : y 
   exact hy
 
 -- Level 11. Intersection of subgroups is a subgroup.
-example {G : Type*} [Group G] (H₁ : Subgroup G) (H₂ : Subgroup G) : Subgroup G where
+example {G : Type*} [Group G] (H₁ : Subgroup G) (H₂ : Subgroup G) : Subgroup G := {
   carrier := H₁.carrier ∩ H₂.carrier
   mul_mem' := by
     intro x y ⟨hx₁, hx₂⟩ ⟨hy₁, hy₂⟩
@@ -73,6 +73,7 @@ example {G : Type*} [Group G] (H₁ : Subgroup G) (H₂ : Subgroup G) : Subgroup
     exact ⟨H₁.one_mem, H₂.one_mem⟩
   inv_mem' := by
     simp
+}
 
 def evens : Set ℕ :=
   { n | Even n }
