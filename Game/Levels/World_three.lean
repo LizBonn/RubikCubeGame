@@ -1,4 +1,4 @@
-import Game.Levels.World_three.L01_injective_definition
+import Game.Levels.World_three.L01_injective_defintion
 import Game.Levels.World_three.L02_injective_composition
 import Game.Levels.World_three.L03_surjective_definition
 import Game.Levels.World_three.L04_surjective_composition
