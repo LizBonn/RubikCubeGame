@@ -1,4 +1,4 @@
-import Game.Levels.DemoWorld
+-- import Game.Levels.DemoWorld
 import Game.Levels.World_one
 import Game.Levels.World_two
 import Game.Levels.World_three
