@@ -4,11 +4,10 @@ import Game.Levels.World_two
 import Game.Levels.World_three
 
 -- Here's what we'll put on the title screen
-Title "Hello World Game"
+Title "Rubik Cube Game"
 Introduction
 "
-This text appears on the starting page where one selects the world/level to play.
-You can use markdown.
+The Rubik's Cube Game is a mathematically formalized educational game designed to guide beginners through a series of interactive challenges, helping them learn foundational formal methods while uncovering the mathematical principles behind solving the Rubik's Cube. By combining problem-solving with mathematical theory, it offers an engaging way to master both formal logic and the cube's intricate mechanics.
 "
 
 Info "

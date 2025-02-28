@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Feb 28 17:29:52 2025\n"
+"POT-Creation-Date: Fri Feb 28 19:36:28 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -503,20 +503,19 @@ msgid "In this world we learn the basic definitions and properties of injective,
 msgstr ""
 
 #: Game
-msgid "Hello World Game"
+msgid "Rubik Cube Game"
 msgstr ""
 
 #: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
-"You can use markdown."
+msgid "The Rubik's Cube Game is a mathematically formalized educational game designed to guide beginners through a series of interactive challenges, helping them learn foundational formal methods while uncovering the mathematical principles behind solving the Rubik's Cube. By combining problem-solving with mathematical theory, it offers an engaging way to master both formal logic and the cube's intricate mechanics."
 msgstr ""
 
 #: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
-"\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
-"\n"
+msgid "Here you can put additional information about the game. It is accessible\n"
+"from the starting through the drop-down menu.\n"
+"\n"
+"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
+"\n"
 "Use markdown."
 msgstr ""
 
